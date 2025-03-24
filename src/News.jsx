@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import getNews from './newsService';
 
 function NewsList() {
-  const { category } = useParams(); // Get the category from the URL
+  const { category } = useParams(); 
   const [news, setNews] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -11,7 +11,7 @@ function NewsList() {
     const fetchNews = async () => {
       const articles = await getNews(category);
       setNews(articles);
-      setCurrentIndex(0); // Reset to first news item when category changes
+      setCurrentIndex(0); 
     };
     fetchNews();
   }, [category]);
@@ -19,9 +19,9 @@ function NewsList() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % news.length);
-    }, 5000); // Change news item every 5 seconds
+    }, 5000); 
 
-    return () => clearInterval(intervalId); // Clean up interval on component unmount
+    return () => clearInterval(intervalId);
   }, [news]);
 
   if (news.length === 0) {

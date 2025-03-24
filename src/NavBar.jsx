@@ -34,7 +34,7 @@ function NavBar({ onCategoryChange }) {
 
 }
 NavBar.propTypes = {
-    onCategoryChange: PropTypes.func.isRequired, // Validates that onCategoryChange is a required function
+    onCategoryChange: PropTypes.func.isRequired, 
   };
 
 

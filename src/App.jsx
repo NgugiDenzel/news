@@ -20,7 +20,6 @@ function App() {
       <Route path="/news/:category" element={<NewsList />} />
       <Route path="/news/:category" element={<First />} />
 
-      {/* Add more routes here as needed */}
       </Routes>
     </Router>
     <First category={category}/>
