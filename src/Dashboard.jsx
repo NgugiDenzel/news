@@ -8,7 +8,7 @@ import logo from './assets/images/logo.svg'
 function Dashboard(){
 
     //   const [news, setNews] = useState([]);
-    //   const [category, setCategory] = useState('general');
+    //   const [category setCategory] = useState('general');
     
     //   useEffect(() => {
     //     const fetchNews = async () => {
